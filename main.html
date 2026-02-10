@@ -4,13 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 </head>
-<body>
-    <div>
-        <p>Some placeholder datat for testing</p>
-    <a href="google.com">test for links</a>
-    <p>And is being pushed with the proper account into the proper branch?</p>
+<body class="">
+    <div class="content">
+        <header class="text-center"><h1>Gestion d'un Restaurant</h1></header>
     </div>
+    <div class="container-fluid bg-light w-75">
+       
+        <form action="LoginManager.php" method="post">
+            <label for="User_Name" class="form-label">Username</label><input type="text" placeholder="username"  id="User_Name" class="form-control">
+            <label for="User_Password" class="form-label">password</label><input type="password"placeholder="*********"  id="User_Password" class="form-control">
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <a href="LoginManager.php"></a>
+    </div>
+    <div class="container-fluid bg-light">
+        <table class="table table-stripped table-bordered border-secodary">
+            <thead>
+                <tr>
+                    //restaurant background will have a banner fitting the width with a lowered transparency and contrast
+                    <th class="col">#</th>
+                    <th class="col">Restaurant</th>
+                    <th class="col">Rating</th>
+                    <th class="col">Dish Of Choice</th>
+                    <th class="col">Contact</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     
     
     
