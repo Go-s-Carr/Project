@@ -4,7 +4,8 @@ require_once "../config/db.php";
 require_once "../includes/functions.php";
 //my first commit here
 // الحماية
-//other stuff
+//other stuff and things
+
 if(!isRole('restaurant')){ header("Location: ../auth/login.php"); exit; }
 
 $user_id = $_SESSION['id'];
