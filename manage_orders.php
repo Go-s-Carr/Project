@@ -5,7 +5,7 @@ require_once "../includes/functions.php";
 //my first commit here
 // الحماية
 //other stuff and things
-
+//another just for good measure
 if(!isRole('restaurant')){ header("Location: ../auth/login.php"); exit; }
 
 $user_id = $_SESSION['id'];
