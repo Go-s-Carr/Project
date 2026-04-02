@@ -1,7 +1,7 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
-require_once "../config/db.php";
-require_once "../includes/functions.php";
+require_once "../Project/config/db.php";
+require_once "../Project/includes/functions.php";
 //my first commit here
 // الحماية
 //other stuff and things
@@ -64,7 +64,7 @@ try {
 <nav class="navbar navbar-dark navbar-custom mb-5 shadow-sm">
     <div class="container">
         <a class="navbar-brand fw-bold" href="./dashboard_res.php">
-            <img src="../assets/img/logo.png.jpeg" height="40" class="me-2 rounded bg-white p-1"> Orders
+            <img src="../Project/assets/img/logo.png.jpeg" height="40" class="me-2 rounded bg-white p-1"> Orders
         </a>
         <a href="./dashboard_res.php" class="btn btn-light btn-sm rounded-pill px-4 fw-bold shadow-sm">
             <i class="bi bi-house-door-fill me-1"></i> Dashboard

@@ -1,7 +1,7 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
-require_once "../config/db.php";
-require_once "../includes/functions.php";
+require_once "../Project/config/db.php";
+require_once "../Project/includes/functions.php";
 
 // Sécurité : Uniquement pour l'admin
 if(!isRole('admin')){
@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom shadow-sm mb-5">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center fw-bold" href="dashboard.php">
-      <img src="../assets/img/logo.png.jpeg" class="logo-img me-2" alt="Logo">
+      <img src="../Project/assets/img/logo.png.jpeg" class="logo-img me-2" alt="Logo">
       FoodConnect Admin
     </a>
     <a href="dashboard.php" class="btn btn-sm btn-outline-light">Retour</a>

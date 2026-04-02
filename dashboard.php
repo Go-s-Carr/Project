@@ -1,8 +1,8 @@
 <?php
 // 1. إدارة الجلسة والحماية
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
-require_once "../config/db.php";
-require_once "../includes/functions.php";
+require_once "../Project/config/db.php";
+require_once "../Project/includes/functions.php";
 
 // الحماية: الأدمن فقط يدخل هنا
 if(!isRole('admin')){ 
@@ -78,12 +78,12 @@ try {
 <nav class="navbar navbar-expand-lg navbar-dark navbar-admin shadow-sm mb-5">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center fw-bold" href="dashboard.php">
-      <img src="../assets/img/logo.png.jpeg" class="logo-img me-2" alt="Logo">
+      <img src="../Project/assets/img/logo.png.jpeg" class="logo-img me-2" alt="Logo">
       FoodConnect <span class="ms-2 badge bg-dark">ADMIN PANEL</span>
     </a>
     <div class="ms-auto d-flex align-items-center">
         <span class="text-white me-3 d-none d-md-block">Bienvenue, <strong>Admin</strong></span>
-        <a href="../auth/logout.php" class="btn btn-sm btn-light text-danger fw-bold rounded-pill px-3">Déconnexion</a>
+        <a href="../Project/auth/logout.php" class="btn btn-sm btn-light text-danger fw-bold rounded-pill px-3">Déconnexion</a>
     </div>
   </div>
 </nav>

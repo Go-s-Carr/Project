@@ -1,7 +1,7 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
-require_once "../config/db.php";
-require_once "../includes/functions.php";
+require_once "../Project/config/db.php";
+require_once "../Project/includes/functions.php";
 
 // الحماية
 if(!isRole('restaurant')){ header("Location: ../auth/login.php"); exit; }
@@ -52,9 +52,9 @@ try {
 <nav class="navbar navbar-dark navbar-custom shadow-sm mb-5">
   <div class="container">
     <a class="navbar-brand fw-bold" href="./dashboard_res.php">
-        <img src="../assets/img/logo.png.jpeg" height="40" class="me-2 rounded bg-white p-1"> FoodConnect PRO
+        <img src="../Project/assets/img/logo.png.jpeg" height="40" class="me-2 rounded bg-white p-1"> FoodConnect PRO
     </a>
-    <a href="../auth/logout.php" class="btn btn-sm btn-light text-danger fw-bold rounded-pill px-4">Déconnexion</a>
+    <a href="../Project/auth/logout.php" class="btn btn-sm btn-light text-danger fw-bold rounded-pill px-4">Déconnexion</a>
   </div>
 </nav>
 

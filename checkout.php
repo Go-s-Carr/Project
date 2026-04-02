@@ -4,8 +4,10 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-require_once "../config/db.php";
-require_once "../includes/functions.php";
+require_once "../Project/config/db.php";
+require_once "../Project/includes/functions.php";
+
+
 
 // 2. VERIFICATION DU PANIER
 if (!isset($_SESSION['id']) || empty($_SESSION['cart'])) {
@@ -71,7 +73,7 @@ try {
 <nav class="navbar navbar-expand-lg navbar-dark navbar-orange shadow-sm mb-5">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center fw-bold" href="index.php">
-      <img src="../assets/img/logo.png.jpeg" class="logo-img" alt="FC Logo">
+      <img src="../Project/assets/img/logo.png.jpeg" class="logo-img" alt="FC Logo">
       FoodConnect
     </a>
   </div>

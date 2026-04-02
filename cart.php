@@ -1,7 +1,7 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
-require_once "../config/db.php";
-require_once "../includes/functions.php";
+require_once "../Project/config/db.php";
+require_once "../Project/includes/functions.php";
 
 if(!isLogged()){ header("Location: ../auth/login.php"); exit; }
 
@@ -33,7 +33,7 @@ $total = 0;
 <nav class="navbar navbar-expand-lg navbar-dark navbar-orange shadow-sm sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center fw-bold" href="index.php">
-      <img src="../assets/img/logo.png.jpeg" class="logo-img" alt="Logo">
+      <img src="../Project/assets/img/logo.png.jpeg" class="logo-img" alt="Logo">
       FoodConnect
     </a>
     <div class="ms-auto">

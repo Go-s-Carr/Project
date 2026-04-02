@@ -1,7 +1,7 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
-require_once "../config/db.php";
-require_once "../includes/functions.php";
+require_once "../Project/config/db.php";
+require_once "../Project/includes/functions.php";
 
 if(!isLogged()){ header("Location: ../auth/login.php"); exit; }
 
@@ -24,14 +24,14 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
 <nav class="navbar navbar-expand-lg navbar-dark navbar-orange shadow-sm">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center fw-bold" href="index.php">
-      <img src="../assets/img/logo.png.jpeg" class="logo-img me-2" alt="Logo">
+      <img src="../Project/assets/img/logo.png.jpeg" class="logo-img me-2" alt="Logo">
       FoodConnect
     </a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item"><a class="nav-link active" href="map_view.php"><i class="bi bi-map"></i> Map</a></li>
         <li class="nav-item"><a class="nav-link" href="cart.php"><i class="bi bi-cart3"></i> Panier (<?= $cartCount ?>)</a></li>
-        <li class="nav-item ms-3"><a class="btn btn-sm btn-light text-primary" href="../auth/logout.php">Déconnexion</a></li>
+        <li class="nav-item ms-3"><a class="btn btn-sm btn-light text-primary" href="../Project/auth/logout.php">Déconnexion</a></li>
       </ul>
     </div>
   </div>

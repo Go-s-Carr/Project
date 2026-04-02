@@ -1,8 +1,8 @@
 <?php
 // Gestion de la session
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
-require_once "../config/db.php";
-require_once "../includes/functions.php";
+require_once "../Project/config/db.php";
+require_once "../Project/includes/functions.php";
 
 // Sécurité : Vérifier si l'utilisateur est connecté
 if(!isLogged()){ header("Location: ../auth/login.php"); exit; }
@@ -50,7 +50,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
 <nav class="navbar navbar-expand-lg navbar-dark navbar-orange shadow-sm sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center fw-bold" href="index.php">
-      <img src="../assets/img/logo.png.jpeg" class="logo-img" alt="Logo">
+      <img src="../Project/assets/img/logo.png.jpeg" class="logo-img" alt="Logo">
       <span>FoodConnect</span>
     </a>
 
@@ -77,7 +77,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
             </a>
         </li>
         <li class="nav-item ms-2">
-            <a class="btn btn-sm btn-light text-primary fw-bold px-3 shadow-sm" href="../auth/logout.php">Déconnexion</a>
+            <a class="btn btn-sm btn-light text-primary fw-bold px-3 shadow-sm" href="../Project/auth/logout.php">Déconnexion</a>
         </li>
       </ul>
     </div>
@@ -95,7 +95,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
         <?php foreach($restos as $resto): ?>
         <div class="col-md-4">
             <div class="card h-100 card-resto shadow-sm">
-                <img src="../assets/img/restaurants/<?= $resto['image'] ?? 'default.jpg' ?>" class="card-img-top" style="height: 200px; object-fit: cover;">
+                <img src="../Project/assets/img/restaurants/<?= $resto['image'] ?? 'default.jpg' ?>" class="card-img-top" style="height: 200px; object-fit: cover;">
                 <div class="card-body">
                     <h5 class="fw-bold"><?= htmlspecialchars($resto['name']) ?></h5>
                     <p class="text-muted small">Cuisine tunisienne et internationale.</p>
